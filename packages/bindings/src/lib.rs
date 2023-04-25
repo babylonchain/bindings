@@ -7,7 +7,7 @@ pub use query::{
     BabylonQuery, BtcBaseHeaderResponse, BtcHeaderQueryResponse, BtcTipResponse,
     CurrentEpochResponse, LatestFinalizedEpochResponse,
 };
-pub use types::{BtcBlockHeader, BtcBlockHeaderInfo};
+pub use types::{BtcBlockHeader, BtcBlockHeaderInfo, FinalizedEpochInfo};
 
 // This export is added to all contracts that import this package, signifying that they require
 // "babylon" support on the chain they run on.

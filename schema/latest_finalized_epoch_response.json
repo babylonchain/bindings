@@ -3,14 +3,34 @@
   "title": "LatestFinalizedEpochResponse",
   "type": "object",
   "required": [
-    "epoch"
+    "epoch_info"
   ],
   "properties": {
-    "epoch": {
-      "type": "integer",
-      "format": "uint64",
-      "minimum": 0.0
+    "epoch_info": {
+      "$ref": "#/definitions/FinalizedEpochInfo"
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "FinalizedEpochInfo": {
+      "type": "object",
+      "required": [
+        "epoch_number",
+        "last_block_height"
+      ],
+      "properties": {
+        "epoch_number": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "last_block_height": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
 }
