@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "LatestFinalizedEpochResponse",
+  "title": "LatestFinalizedEpochInfoResponse",
   "type": "object",
   "required": [
     "epoch_info"

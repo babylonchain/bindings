@@ -8,7 +8,7 @@ pub enum BabylonQuery {
     #[returns(CurrentEpochResponse)]
     Epoch {},
 
-    #[returns(LatestFinalizedEpochResponse)]
+    #[returns(LatestFinalizedEpochInfoResponse)]
     LatestFinalizedEpochInfo {},
 
     #[returns(BtcBaseHeaderResponse)]
@@ -29,7 +29,7 @@ pub struct CurrentEpochResponse {
     pub epoch: u64,
 }
 #[cw_serde]
-pub struct LatestFinalizedEpochResponse {
+pub struct LatestFinalizedEpochInfoResponse {
     pub epoch_info: FinalizedEpochInfo,
 }
 

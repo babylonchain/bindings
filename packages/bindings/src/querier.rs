@@ -2,7 +2,7 @@ use cosmwasm_std::{QuerierWrapper, StdResult, Uint64};
 
 use crate::query::{
     BabylonQuery, BtcBaseHeaderResponse, BtcHeaderQueryResponse, BtcTipResponse,
-    CurrentEpochResponse, LatestFinalizedEpochResponse,
+    CurrentEpochResponse, LatestFinalizedEpochInfoResponse,
 };
 use crate::types::{BtcBlockHeaderInfo, FinalizedEpochInfo};
 
@@ -23,7 +23,7 @@ impl<'a> BabylonQuerier<'a> {
 
     pub fn latest_finalized_epoch_info(&self) -> StdResult<FinalizedEpochInfo> {
         let request = BabylonQuery::LatestFinalizedEpochInfo {}.into();
-        let res: LatestFinalizedEpochResponse = self.querier.query(&request)?;
+        let res: LatestFinalizedEpochInfoResponse = self.querier.query(&request)?;
         Ok(res.epoch_info)
     }
 
