@@ -15,7 +15,7 @@ dependencies = [
 
 [[package]]
 name = "babylon-bindings"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "cosmwasm-schema",
  "cosmwasm-std",
@@ -25,7 +25,7 @@ dependencies = [
 
 [[package]]
 name = "babylon-example"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "babylon-bindings",
  "cosmwasm-schema",
